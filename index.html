@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Grade and Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Calculator</h1>
+        <p>Enter your total marks and obtained marks to calculate your percentage and grade:</p>
+        <input type="number" id="totalMarks" placeholder="Enter total marks">
+        <input type="number" id="obtainedMarks" placeholder="Enter obtained marks">
+        <button onclick="calculateGrade()">Calculate Grade</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div class="container">
+        <h1>Calculator</h1>
+        <p>Use the keypad to enter numbers and calculate the total. Pass the total to the Grade Calculator:</p>
+        <div class="keypad">
+            <input type="text" id="calcInput" readonly>
+            <div class="keys">
+                <button onclick="addToInput('1')">1</button>
+                <button onclick="addToInput('2')">2</button>
+                <button onclick="addToInput('3')">3</button>
+                <button onclick="addToInput('4')">4</button>
+                <button onclick="addToInput('5')">5</button>
+                <button onclick="addToInput('6')">6</button>
+                <button onclick="addToInput('7')">7</button>
+                <button onclick="addToInput('8')">8</button>
+                <button onclick="addToInput('9')">9</button>
+                <button onclick="addToInput('0')">0</button>
+                <button onclick="addToInput('+')">+</button>
+                <button onclick="clearInput()">C</button>
+                <button onclick="calculateTotal()">=</button>
+            </div>
+        </div>
+        <button onclick="passResult()">Pass Total to Grade Calculator</button>
+        <div class="result" id="calcResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
